@@ -6,7 +6,7 @@ import java.util.*;
 public class BruteForceStrategy implements RobbingStrategy {
 
     List<String> bestOrderingFound = new ArrayList<>(); // attack nothing at all?
-    // TODO: Add something to keep track of the best value found so far
+    double bestValueFound = Double.NEGATIVE_INFINITY;
 
     @Override
     public List<String> chooseOrderToAttack(LabeledValueGraph graph) {
@@ -22,12 +22,19 @@ public class BruteForceStrategy implements RobbingStrategy {
 //        System.out.println("For Debug, Chosen: " + chosen + "  Remaining: " + remainingVertexLabels);
         if (remainingVertexLabels.isEmpty()) {
             double chosenValue = AttackValueVerifier.computeGoldForAttackOrdering(graph, chosen);
-            // TODO: update best value / best ordering if necessary
+            if (chosenValue > bestValueFound) {
+                bestValueFound = chosenValue;
+                bestOrderingFound = new ArrayList<>(chosen);
+            }
         } else {
             for (int i = 0; i < remainingVertexLabels.size(); i++) {
-                // TODO: make changes to remainingVertexLabels and chosen
-                // TODO: do recursive call with updated values
-                // TODO: undo changes to remainingVertexLabels and chosen
+                String chosenLabel = remainingVertexLabels.remove(i);
+                chosen.add(chosenLabel);
+
+                tryAllPermutations(graph, remainingVertexLabels, chosen);
+
+                chosen.remove(chosen.size() - 1);
+                remainingVertexLabels.add(i, chosenLabel);
             }
         }
     }
