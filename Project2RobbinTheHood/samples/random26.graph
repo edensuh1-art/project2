@@ -1,0 +1,53 @@
+//To visualize and edit small graphs, you copy/paste the following lines to/from https://csacademy.com/app/graph_editor/
+// Optimal 108.5, good greedy 108.5
+A*:6
+T:7
+M*:6
+B:8
+O!:5
+E:7
+Y!:2
+C:2
+X#:5
+D:2
+U:2
+Z:4
+I!:5
+Q:8
+F:5
+G:2
+W:4
+H:2
+S#:5
+L*#:8
+J:8
+K:3
+N:3
+P:8
+R#:1
+V   :3
+T:7 A*:6
+T:7 S#:5
+T:7 C:2
+M*:6 A*:6
+O!:5 B:8
+O!:5 F:5
+E:7 B:8
+Y!:2 B:8
+Y!:2 R#:1
+Y!:2 K:3
+X#:5 C:2
+U:2 D:2
+Z:4 D:2
+Z:4 O!:5
+I!:5 D:2
+Q:8 D:2
+W:4 R#:1
+W:4 G:2
+S#:5 H:2
+L*#:8 I!:5
+J:8 I!:5
+N:3 M*:6
+R#:1 P:8
+
+

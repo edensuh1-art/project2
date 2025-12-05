@@ -1,0 +1,25 @@
+//To visualize and edit small graphs, you copy/paste the following lines to/from https://csacademy.com/app/graph_editor/
+// Optimal 730, good greedy 560
+A:70
+D:80
+B:70
+H:80
+C:70
+E:90
+J:70
+F:100
+G:90
+I:70
+K:70
+D:80 A:70
+D:80 C:70
+H:80 B:70
+H:80 G:90
+E:90 D:80
+J:70 D:80
+F:100 E:90
+G:90 F:100
+I:70 H:80
+K:70 H:80
+
+

@@ -1,0 +1,14 @@
+//To visualize and edit small graphs, you copy/paste the following lines to/from https://csacademy.com/app/graph_editor/
+// Optimal 34.0, good greedy 34.0
+A:2
+B:3
+C:5
+D:4
+F:7
+E:6
+H:8
+G:9
+A:2 B:3
+C:5 D:4
+F:7 E:6
+H:8 G:9
