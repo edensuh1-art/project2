@@ -13,16 +13,16 @@ public class Main {
     }
 
     public static void compareStrategies() throws FileNotFoundException {
-        String inputFile = "samples/tree8.graph";
-//        String inputFile = "samples/sherwood_forest.graph";
-//        String inputFile = "samples/random1000.graph";
+        //String inputFile = "samples/tree8.graph";
+        //String inputFile = "samples/sherwood_forest.graph";
+        String inputFile = "samples/random1000.graph";
         LabeledValueGraph graph = new LabeledValueGraph(inputFile);
 
         List<RobbingStrategy> strategies = new ArrayList<>();
-        strategies.add(new RandomStrategy());
-        strategies.add(new BruteForceStrategy());
-//        strategies.add(new GreedyStrategy());
-//        strategies.add(new DPStrategy());
+        //strategies.add(new RandomStrategy());
+        //strategies.add(new BruteForceStrategy());
+        //strategies.add(new GreedyStrategy());
+        strategies.add(new DPStrategy());
 
         for (RobbingStrategy strategy : strategies) {
             testStrategy(strategy, graph);
@@ -50,10 +50,10 @@ public class Main {
                     0.2, 0.2, 0.2);
 
             //TODO: change this to the appropriate strategy you want to collect timing data for!
-            strategy = new RandomStrategy();
-            //RobbingStrategy strategy = new BruteForceStrategy();
-            //RobbingStrategy strategy = new GreedyStrategy();
-            //RobbingStrategy strategy = new DPStrategy();
+            //strategy = new RandomStrategy();
+            //strategy = new BruteForceStrategy();
+            //strategy = new GreedyStrategy();
+            strategy = new DPStrategy();
 
             double timeSum  = 0.0;
             int NUM_TRIALS = 1;
